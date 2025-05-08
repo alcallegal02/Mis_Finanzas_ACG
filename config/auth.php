@@ -36,11 +36,17 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+
+    'api' => [ // Modificar esta sección
+        'driver' => 'jwt', // Cambiar 'token' por 'jwt'
+        'provider' => 'users',
+        // 'hash' => false, // Descomentar si es necesario según la versión o si tienes problemas
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------
